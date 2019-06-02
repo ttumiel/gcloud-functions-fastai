@@ -1,22 +1,23 @@
-from flask import escape
+from flask import Flask, escape, jsonify#, request
+from utils import generate_text
+# app = Flask(__name__)
 
+# @app.route('/', methods=['GET', 'POST'])
 def text_endpoint(request):
     """HTTP Cloud Function.
     Args:
         request (flask.Request): The request object.
-        <http://flask.pocoo.org/docs/1.0/api/#flask.Request>
     Returns:
-        The response text, or any set of values that can be turned into a
-        Response object using `make_response`
-        <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>.
+        The response text.
     """
     request_json = request.get_json(silent=True)
     request_args = request.args
 
-    if request_json and 'name' in request_json:
-        name = request_json['name']
-    elif request_args and 'name' in request_args:
-        name = request_args['name']
+    if request_json and 'data' in request_json:
+        data = request_json['data']
+    elif request_args and 'data' in request_args:
+        data = request_args['data']
+        # Get optional parameters here
     else:
-        name = 'World'
-    return 'Hello {}!'.format(escape(name))
+        return "Error"
+    return jsonify({'text': generate_text(data)})
