@@ -1,11 +1,12 @@
 # Set the path to your model
 PATH = "data/"
+MODEL_NAME = "export.pkl"
 
 
 # TEXT GENERATION DEFAULTS
 # ========================
 
-# Default words when no data was set
+# Default words when no data was sent in the request
 DEFAULT_WORDS = ["the", "a", "there", "when"]
 
 # Number of words per request
