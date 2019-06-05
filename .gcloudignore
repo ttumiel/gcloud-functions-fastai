@@ -1,0 +1,8 @@
+# Files to ignore when uploading cloud function
+
+.git/
+deploy.sh
+README.md
+.vscode/
+__pycache__/
+data/.gitkeep
