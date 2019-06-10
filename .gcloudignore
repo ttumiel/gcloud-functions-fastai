@@ -6,3 +6,5 @@ README.md
 .vscode/
 __pycache__/
 data/.gitkeep
+test.py
+__init__.py
