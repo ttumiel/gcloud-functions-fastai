@@ -12,5 +12,5 @@ def classify_text(text):
     return {
         "category": str(cat),
         "position": pos.item(),
-        "preds": list(vals.numpy())
+        "preds": list(vals.numpy().astype('float'))
     }
