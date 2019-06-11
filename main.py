@@ -30,4 +30,5 @@ def text_gen(data):
 
 @endpoint
 def text_clas(data):
+    "Text classification cloud function."
     return classify_text(data)
