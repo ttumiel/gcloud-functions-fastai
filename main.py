@@ -1,9 +1,8 @@
-from flask import Flask, escape, jsonify#, request
+from flask import Flask, escape, jsonify
 from utils import generate_text, classify_text
 import random
 
 from config import DEFAULT_WORDS
-# app = Flask(__name__)
 
 def endpoint(func):
     def wrapper(request):
@@ -11,14 +10,17 @@ def endpoint(func):
         request_args = request.args
 
         if request_json and 'data' in request_json:
-            data = request_json['data']
+            args = request_json
         elif request_args and 'data' in request_args:
-            data = request_args['data']
-            # Get optional parameters here
+            args = request_args
         else:
-            data = random.choice(DEFAULT_WORDS)
+            args = {"data":random.choice(DEFAULT_WORDS)}
         
-        resp = func(data)
+        try:
+            resp = func(**args)
+        except:
+            pass
+
         return jsonify(resp)
     return wrapper
 
