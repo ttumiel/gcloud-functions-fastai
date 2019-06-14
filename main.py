@@ -19,7 +19,7 @@ def endpoint(func):
         try:
             resp = func(**args)
         except:
-            pass
+            resp = {}
 
         return jsonify(resp)
     return wrapper
