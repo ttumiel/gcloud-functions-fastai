@@ -10,7 +10,7 @@ If your model is larger than 50MB, you will have to adjust the amount of memory 
 
 ## Tutorial
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Tom2718/gcloud-functions-fastai/blob/master/tutorial.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ttumiel/gcloud-functions-fastai/blob/master/tutorial.ipynb)
 
 ### Requirements
 
