@@ -7,6 +7,6 @@ pip==18.0
 requests==2.21.0
 setuptools==40.2.0
 Werkzeug==0.14.1
-wheel==0.31.1
+wheel==0.38.1
 https://download.pytorch.org/whl/cpu/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
 fastai
